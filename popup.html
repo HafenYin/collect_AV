@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>AV数据录入</title>
+  <style>
+    .container {
+      width: 300px;
+      padding: 20px;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+    }
+
+    .alert-box {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ff4444;
+      border-radius: 4px;
+      background-color: #ffebee;
+      color: #cc0000;
+      font-size: 14px;
+      align-items: center;
+      display: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .alert-text {
+      margin-left: 8px;
+    }
+
+    .button-group {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 错误提示区域 -->
+    <div class="alert-box" id="errorMessage">
+      <span class="alert-text"></span>
+    </div>
+
+    <div class="input-group">
+      <label>女优名称：</label>
+      <input type="text" id="actressName" placeholder="请输入女优名称">
+    </div>
+    <div class="input-group">
+      <label>作品编号：</label>
+      <input type="text" id="productCode" placeholder="请输入作品编号">
+    </div>
+    <div class="input-group">
+      <label>网页链接：</label>
+      <input type="text" id="filmUrl" placeholder="请输入网页链接">
+    </div>
+    <div class="button-group">
+      <button id="saveBtn">保存数据</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

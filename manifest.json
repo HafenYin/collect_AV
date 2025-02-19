@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "AV数据收集器",
+  "version": "1.0",
+  "description": "将AV数据保存到Notion的浏览器扩展",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "downloads.shelf",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
